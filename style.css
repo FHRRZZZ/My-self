@@ -1,0 +1,372 @@
+/* Hilangkan scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animasi slide */
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10%,
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  33.33%,
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+.animate-slide {
+  animation: slide 9s infinite;
+}
+
+/* Animasi fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project card hover */
+.project-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #1e293b 100%);
+}
+
+/* Carousel button effect (tidak digunakan lagi) */
+.carousel-btn {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.carousel-btn:hover {
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow: 0 4px 16px #2563eb55;
+}
+
+/* Flip Card */
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 9999px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* React logo */
+.react-logo {
+  width: clamp(300px, 50vw, 400px); /* Ukuran lebih besar */
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.orbit {
+  stroke-width: 4;
+  animation: orbit-rotate 6s linear infinite;
+  transform-origin: 128px 128px; /* Pastikan sesuai dengan ukuran baru */
+}
+.orbit2 {
+  animation-delay: 2s;
+}
+.orbit3 {
+  animation-delay: 4s;
+}
+.electron {
+  fill: #61dafb;
+  animation: electron-rotate 6s linear infinite;
+  transform-origin: 128px 128px; /* Sesuaikan jika perlu */
+}
+.electron1 {
+  animation-name: electron-rotate1;
+}
+.electron2 {
+  animation-name: electron-rotate2;
+  animation-delay: 2s;
+}
+.electron3 {
+  animation-name: electron-rotate3;
+  animation-delay: 4s;
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes electron-rotate1 {
+  from {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+@keyframes electron-rotate2 {
+  from {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+@keyframes electron-rotate3 {
+  from {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+
+/* Responsivitas */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Canvas untuk efek komet */
+#comet-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Pastikan di belakang konten */
+  pointer-events: none;
+}
+
+/* Sidebar responsif */
+aside {
+  width: 16rem;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  padding: 1rem; /* Tambahkan padding agar logo besar tidak terlalu menempel tepi */
+}
+
+@media (max-width: 768px) {
+  aside {
+    transform: translateX(-100%);
+    position: fixed;
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  aside.active {
+    transform: translateX(0);
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 1rem;
+  }
+
+  #comet-bg {
+    left: 0;
+    width: 100vw;
+  }
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Hero section responsif */
+#home .hero-gradient {
+  padding: 2rem clamp(1rem, 5vw, 2rem);
+}
+
+#home h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+#home p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+/* Grid untuk Languages dan Frameworks */
+#languages .language-grid,
+#frameworks .framework-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+#languages .language-grid > div,
+#frameworks .framework-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #1e293b;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 0;
+}
+
+#languages .language-grid > div:hover,
+#frameworks .framework-grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+#languages .language-grid > div img,
+#frameworks .framework-grid > div img {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  filter: brightness(1.2);
+}
+
+#languages .language-grid > div .font-semibold,
+#frameworks .framework-grid > div .font-semibold {
+  font-size: 1rem;
+  color: #93c5fd;
+  text-align: center;
+  padding: 0 0.25rem;
+}
+
+@media (max-width: 640px) {
+  #languages .language-grid,
+  #frameworks .framework-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  #languages .language-grid > div img,
+  #frameworks .framework-grid > div img {
+    max-width: 50px;
+  }
+
+  #languages .language-grid > div .font-semibold,
+  #frameworks .framework-grid > div .font-semibold {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 641px) {
+  #languages .language-grid,
+  #frameworks .framework-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* Grid proyek responsif */
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer responsif */
+footer {
+  padding: 1.5rem;
+}
+
+footer span {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* Flip card responsif */
+.flip-card {
+  width: clamp(100px, 20vw, 128px);
+  height: clamp(100px, 20vw, 128px);
+}
+
+.flip-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animasi fade-in untuk mobile */
+@media (max-width: 640px) {
+  .fade-in {
+    transform: translateY(10px);
+  }
+}
+
+/* Media query untuk tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  aside {
+    width: 12rem;
+  }
+
+  main {
+    margin-left: 12rem;
+  }
+
+  #comet-bg {
+    left: 12rem;
+    width: calc(100vw - 12rem);
+  }
+
+  #projects .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  #languages .language-grid,
+  #frameworks .framework-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  #languages .language-grid > div img,
+  #frameworks .framework-grid > div img {
+    max-width: 70px;
+  }
+}

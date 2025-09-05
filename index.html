@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>My Self</title>
+</head>
+<body class="bg-gray-900 text-white flex">
+  <!-- Hamburger Menu -->
+  <button class="hamburger" onclick="toggleSidebar()">
+    <i data-lucide="menu" class="w-8 h-8 text-white"></i>
+  </button>
+
+  <aside class="flex w-64 h-screen bg-gradient-to-b from-gray-800 to-gray-700 p-6 fixed flex-col items-center left-0 top-0 shadow-xl">
+    <h2 class="text-2xl font-extrabold mb-6 tracking-wide">Fhrrzz</h2>
+    <div class="flip-card w-32 h-32 mb-6">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="photo_1745494790816-removebg-preview.png" alt="Profile" 
+               class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-2xl object-cover">
+        </div>
+        <div class="flip-card-back flex items-center justify-center rounded-full border-4 border-blue-500 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-800">
+          <span class="text-white font-bold text-5xl">FZ</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-15 mt-4 text-gray-400">
+      <a href="https://www.instagram.com/miqdadfh?igsh=MXV1dXQ5Zjh0ZGtkZw==" target="_blank" class="hover:text-pink-500 transition transform hover:scale-110"><i data-lucide="instagram" class="w-8 h-8"></i></a>
+      <a href="https://wa.me/qr/HXLDZEGYV4HIK1" target="_blank" class="hover:text-green-500 transition transform hover:scale-110"><i data-lucide="phone" class="w-8 h-8"></i></a>
+      <a href="https://github.com/FHRRZZZ" target="_blank" class="hover:text-white transition transform hover:scale-110"><i data-lucide="github" class="w-8 h-8"></i></a>
+      <a href="https://linkedin.com/in/username" target="_blank" class="hover:text-blue-500 transition transform hover:scale-110"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
+    </div>
+    <div class="mt-10 flex justify-center w-full ml-10">
+      <svg class="react-logo w-30 h-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none" stroke-width="10">
+        <defs>
+          <linearGradient id="blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#61dafb" />
+            <stop offset="100%" stop-color="#1e3a8a" />
+          </linearGradient>
+        </defs>
+        <circle cx="128" cy="128" r="24" fill="url(#blue-gradient)" />
+        <ellipse cx="128" cy="128" rx="88" ry="48" class="orbit orbit1" stroke="url(#blue-gradient)" />
+        <ellipse cx="128" cy="128" rx="88" ry="48" transform="rotate(60 128 128)" class="orbit orbit2" stroke="url(#blue-gradient)" />
+        <ellipse cx="128" cy="128" rx="88" ry="48" transform="rotate(120 128 128)" class="orbit orbit3" stroke="url(#blue-gradient)" />
+        <circle cx="208" cy="128" r="12" class="electron electron1" fill="url(#blue-gradient)" />
+        <circle cx="84" cy="70" r="12" class="electron electron2" fill="url(#blue-gradient)" />
+        <circle cx="84" cy="186" r="12" class="electron electron3" fill="url(#blue-gradient)" />
+      </svg>
+    </div>
+  </aside>
+
+  <canvas id="comet-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+  <main class="flex-1 ml-64 p-8 mt-10">
+    <section id="home" class="flex justify-center items-center px-4 py-16 hero-gradient text-gray-100 rounded-2xl fade-in">
+      <div class="flex flex-wrap justify-center items-center gap-8 w-full lg:w-3/4 bg-gray-800/50 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white flex-shrink-0 animate-pulse">Hallo, I'm Fhrrzz !!!</h2>
+        <p class="flex-1 text-gray-300 text-lg md:text-xl">
+          I am a <span class="text-blue-400 font-semibold">React Native developer</span> passionate about building <span class="text-blue-400 font-semibold">responsive</span> and <span class="text-blue-400 font-semibold">user-friendly</span> mobile and web applications.
+        </p>
+      </div>
+    </section>
+
+    <section id="languages" class="mt-8 rounded-lg shadow-lg p-6 bg-gray-900 bg-transparent text-gray-100 fade-in">
+      <h1 class="text-center text-3xl font-semibold mb-6 text-blue-500">Languages</h1>
+      <div class="language-grid grid gap-6 p-4 rounded-lg shadow-inner bg-gray-800">
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Python</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">PHP</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">JavaScript</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">TypeScript</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Java</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Dart</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="frameworks" class="bg-transparent mt-12 rounded-lg shadow-lg p-6 bg-gray-900 text-gray-100 fade-in">
+      <h1 class="text-center text-3xl font-semibold mb-6 text-blue-500">Frameworks & Libraries</h1>
+      <div class="framework-grid grid gap-6 p-4 rounded-lg shadow-inner bg-gray-800">
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="Laravel.svg.png" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Laravel</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">React</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Flutter</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Flask</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="Tailwind_CSS_Logo.svg.png" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Tailwind</div>
+        </div>
+        <div class="p-4 bg-blue-900 rounded-xl shadow-md flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="w-12 h-12">
+          <div class="mt-4 font-semibold">Bootstrap</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mt-12 bg-transparent rounded-lg shadow-lg p-6 bg-gray-900 text-gray-100 fade-in">
+      <h1 class="text-center text-3xl font-semibold mb-6 text-blue-500">Projects</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 project-card">
+          <img src="1.png" alt="Project 1" class="rounded-lg w-full h-40 object-cover mb-4">
+          <h2 class="text-xl font-semibold text-white mb-2">Portfolio Website</h2>
+          <p class="text-gray-300 text-sm">A personal portfolio website built using React and Tailwind CSS with dark mode support.</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-blue-400 hover:underline text-sm">Demo</a>
+            <a href="#" class="text-blue-400 hover:underline text-sm">Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 project-card">
+          <img src="Screenshot 2025-09-05 230243.png" alt="Project 2" class="rounded-lg w-full h-40 object-cover mb-4">
+          <h2 class="text-xl font-semibold text-white mb-2">E-Learning Website</h2>
+          <p class="text-gray-300 text-sm">A full-stack e-learning web app using Laravel</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-blue-400 hover:underline text-sm">Demo</a>
+            <a href="#" class="text-blue-400 hover:underline text-sm">Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 project-card">
+          <img src="tsx.png" alt="Project 3" class="rounded-lg w-full h-40 object-cover mb-4">
+          <h2 class="text-xl font-semibold text-white mb-2">Portfolio Website</h2>
+          <p class="text-gray-300 text-sm">A personal portfolio website built using React and Tailwind CSS with dark mode support.</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-blue-400 hover:underline text-sm">Demo</a>
+            <a href="#" class="text-blue-400 hover:underline text-sm">Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 project-card">
+          <img src="2.png" alt="Project 4" class="rounded-lg w-full h-40 object-cover mb-4">
+          <h2 class="text-xl font-semibold text-white mb-2">Attendance Website</h2>
+          <p class="text-gray-300 text-sm">Web attendance using QR code scanning with React.</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="text-blue-400 hover:underline text-sm">Demo</a>
+            <a href="#" class="text-blue-400 hover:underline text-sm">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 p-6 bg-gray-800 text-center text-gray-400 flex flex-col items-center gap-2">
+      <span class="text-2xl">You can contact dev in the sidebar</span>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
