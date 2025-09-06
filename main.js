@@ -95,3 +95,16 @@ if (canvas) {
 } else {
   console.error("Canvas element not found");
 }
+
+  document.querySelectorAll('.group').forEach(card => {
+    card.addEventListener('click', () => {
+      const content = card.querySelector('.hidden-content');
+      if(content.classList.contains('max-h-0')) {
+        content.classList.remove('max-h-0', 'opacity-0', '-translate-y-2');
+        content.classList.add('max-h-[600px]', 'opacity-100', 'translate-y-0');
+      } else {
+        content.classList.add('max-h-0', 'opacity-0', '-translate-y-2');
+        content.classList.remove('max-h-[600px]', 'opacity-100', 'translate-y-0');
+      }
+    });
+  });
