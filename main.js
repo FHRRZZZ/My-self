@@ -51,7 +51,7 @@ if (canvas) {
   if (ctx) {
     function spawnComet() {
       // Tambahkan hingga 3 komet sekaligus
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 2; i++) {
         comets.push({
           x: Math.random() * canvas.width,
           y: -20,
@@ -62,7 +62,7 @@ if (canvas) {
         });
       }
     }
-    setInterval(spawnComet, 300); // Interval lebih pendek untuk komet lebih sering
+    setInterval(spawnComet, 500); // Interval lebih pendek untuk komet lebih sering
 
     function drawComets() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
