@@ -8,19 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <title>My Self</title>
 </head>
-<body class="bg-gray-900 text-white flex">
-  <!-- Hamburger Menu -->
-  <button class="hamburger" onclick="toggleSidebar()">
-    <i data-lucide="menu" class="w-8 h-8 text-white"></i>
-  </button>
-
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+  <button class="hamburger" onclick="toggleSidebar()"><i data-lucide="menu" class="w-8 h-8 text-white"></i></button>
   <aside class="flex w-64 h-screen bg-gradient-to-b from-gray-800 to-gray-700 p-6 fixed flex-col items-center left-0 top-0 shadow-xl">
     <h2 class="text-2xl font-extrabold mb-6 tracking-wide">Fhrrzz</h2>
     <div class="flip-card w-32 h-32 mb-6">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="photo_1745494790816-removebg-preview.png" alt="Profile" 
-               class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-2xl object-cover">
+          <img src="photo_1745494790816-removebg-preview.png" alt="Profile" class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-2xl object-cover">
         </div>
         <div class="flip-card-back flex items-center justify-center rounded-full border-4 border-blue-500 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-800">
           <span class="text-white font-bold text-5xl">FZ</span>
@@ -51,9 +46,7 @@
       </svg>
     </div>
   </aside>
-
   <canvas id="comet-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
-
   <main class="flex-1 ml-64 p-8 mt-10">
     <section id="home" class="flex justify-center items-center px-4 py-16 hero-gradient text-gray-100 rounded-2xl fade-in">
       <div class="flex flex-wrap justify-center items-center gap-8 w-full lg:w-3/4 bg-gray-800/50 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
@@ -63,52 +56,37 @@
         </p>
       </div>
     </section>
-
-<section class="mt-8 rounded-lg shadow-lg p-6 bg-transparent text-gray-100 fade-in flex flex-col md:flex-row gap-6">
-  <!-- Languages -->
-  <div onclick="this.classList.toggle('active')" 
-       class="w-full md:w-1/2 p-6 rounded-xl shadow-xl bg-gray-800/70 backdrop-blur-md group hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
-    <h1 class="text-center text-2xl font-semibold cursor-pointer text-blue-400 group-hover:text-blue-300 transition-colors">
-      Languages
-    </h1>
-    <div class="hidden-content max-h-0 opacity-0 overflow-hidden transform -translate-y-2 transition-all duration-700 ease-in-out group-hover:max-h-[600px] group-hover:opacity-100 group-hover:translate-y-0">
-      <p class="mt-4 text-gray-300 leading-relaxed text-center">
-        Programming languages I use to build projects, from web and mobile apps to backend systems.
-      </p>
-      <div class="flex gap-6 mt-6 flex-wrap justify-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" width="50" class="hover:scale-110 transition-transform">
+    <section class="mt-8 rounded-lg shadow-lg p-6 bg-transparent text-gray-100 fade-in flex flex-col md:flex-row gap-6">
+      <div onclick="this.classList.toggle('active')" 
+          class="w-full md:w-1/2 p-6 rounded-xl shadow-xl bg-gray-800/70 backdrop-blur-md group hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
+        <h1 class="text-center text-2xl font-semibold cursor-pointer text-blue-400 group-hover:text-blue-300 transition-colors">Languages</h1>
+        <div class="hidden-content max-h-0 opacity-0 overflow-hidden transform -translate-y-2 transition-all duration-700 ease-in-out group-hover:max-h-[600px] group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="mt-4 text-gray-300 leading-relaxed text-center">Programming languages I use to build projects, from web and mobile apps to backend systems.</p>
+          <div class="flex gap-6 mt-6 flex-wrap justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" width="50" class="hover:scale-110 transition-transform">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Frameworks & Libraries -->
-  <div onclick="this.classList.toggle('active')" 
-       class="w-full md:w-1/2 p-6 rounded-xl shadow-xl bg-gray-800/70 backdrop-blur-md group hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
-    <h1 class="text-center text-2xl font-semibold cursor-pointer text-blue-400 group-hover:text-blue-300 transition-colors">
-      Frameworks & Libraries
-    </h1>
-    <div class="hidden-content max-h-0 opacity-0 overflow-hidden transform -translate-y-2 transition-all duration-700 ease-in-out group-hover:max-h-[600px] group-hover:opacity-100 group-hover:translate-y-0">
-      <p class="mt-4 text-gray-300 leading-relaxed text-center">
-        Frameworks and libraries that speed up development, keep code organized, and deliver modern, responsive interfaces.
-      </p>
-      <div class="flex gap-6 mt-6 flex-wrap justify-center">
-        <img src="Laravel.svg.png" alt="Laravel" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" width="50" class="hover:scale-110 transition-transform">
-        <img src="Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" width="50" class="hover:scale-110 transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="50" class="hover:scale-110 transition-transform">
+      <div onclick="this.classList.toggle('active')" class="w-full md:w-1/2 p-6 rounded-xl shadow-xl bg-gray-800/70 backdrop-blur-md group hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
+        <h1 class="text-center text-2xl font-semibold cursor-pointer text-blue-400 group-hover:text-blue-300 transition-colors">Frameworks & Libraries</h1>
+        <div class="hidden-content max-h-0 opacity-0 overflow-hidden transform -translate-y-2 transition-all duration-700 ease-in-out group-hover:max-h-[600px] group-hover:opacity-100 group-hover:translate-y-0">
+          <p class="mt-4 text-gray-300 leading-relaxed text-center">Frameworks and libraries that speed up development, keep code organized, and deliver modern, responsive interfaces.</p>
+          <div class="flex gap-6 mt-6 flex-wrap justify-center">
+            <img src="Laravel.svg.png" alt="Laravel" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" width="50" class="hover:scale-110 transition-transform">
+            <img src="Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" width="50" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="50" class="hover:scale-110 transition-transform">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
     <section id="projects" class="mt-12 bg-transparent rounded-lg shadow-lg p-6 bg-gray-900 text-gray-100 fade-in">
       <h1 class="text-center text-3xl font-semibold mb-6 text-blue-500">Projects</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -150,7 +128,6 @@
         </div>
       </div>
     </section>
-
     <footer class="mt-12 p-6 bg-gray-800 text-center text-gray-400 flex flex-col items-center gap-2">
       <span class="text-2xl">You can contact dev in the sidebar</span>
     </footer>

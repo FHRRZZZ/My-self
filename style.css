@@ -1,4 +1,3 @@
-/* Hilangkan scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -7,7 +6,6 @@
   scrollbar-width: none;
 }
 
-/* Animasi slide */
 @keyframes slide {
   0% {
     transform: translateY(100%);
@@ -28,7 +26,6 @@
   animation: slide 9s infinite;
 }
 
-/* Animasi fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -39,7 +36,6 @@
   transform: translateY(0);
 }
 
-/* Project card hover */
 .project-card:hover {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   transform: scale(1.05) rotate(-1deg);
@@ -50,7 +46,6 @@
   background: linear-gradient(135deg, #2563eb 0%, #1e293b 100%);
 }
 
-/* Carousel button effect (tidak digunakan lagi) */
 .carousel-btn {
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -59,7 +54,6 @@
   box-shadow: 0 4px 16px #2563eb55;
 }
 
-/* Flip Card */
 .flip-card {
   perspective: 1000px;
 }
@@ -86,9 +80,8 @@
   transform: rotateY(180deg);
 }
 
-/* React logo */
 .react-logo {
-  width: clamp(300px, 50vw, 400px); /* Ukuran lebih besar */
+  width: clamp(300px, 50vw, 400px); 
   height: auto;
   display: block;
   overflow: visible;
@@ -96,7 +89,7 @@
 .orbit {
   stroke-width: 4;
   animation: orbit-rotate 6s linear infinite;
-  transform-origin: 128px 128px; /* Pastikan sesuai dengan ukuran baru */
+  transform-origin: 128px 128px;
 }
 .orbit2 {
   animation-delay: 2s;
@@ -107,7 +100,7 @@
 .electron {
   fill: #61dafb;
   animation: electron-rotate 6s linear infinite;
-  transform-origin: 128px 128px; /* Sesuaikan jika perlu */
+  transform-origin: 128px 128px; 
 }
 .electron1 {
   animation-name: electron-rotate1;
@@ -154,7 +147,6 @@
   }
 }
 
-/* Responsivitas */
 body {
   display: flex;
   flex-direction: column;
@@ -162,23 +154,21 @@ body {
   overflow-x: hidden;
 }
 
-/* Canvas untuk efek komet */
 #comet-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Pastikan di belakang konten */
+  z-index: -1;
   pointer-events: none;
 }
 
-/* Sidebar responsif */
 aside {
   width: 16rem;
   transition: transform 0.3s ease;
   z-index: 10;
-  padding: 1rem; /* Tambahkan padding agar logo besar tidak terlalu menempel tepi */
+  padding: 1rem; 
 }
 
 @media (max-width: 768px) {
@@ -204,7 +194,6 @@ aside {
   }
 }
 
-/* Hamburger menu */
 .hamburger {
   display: none;
   position: fixed;
@@ -220,7 +209,6 @@ aside {
   }
 }
 
-/* Hero section responsif */
 #home .hero-gradient {
   padding: 2rem clamp(1rem, 5vw, 2rem);
 }
@@ -233,7 +221,6 @@ aside {
   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
-/* Grid untuk Languages dan Frameworks */
 #languages .language-grid,
 #frameworks .framework-grid {
   display: grid;
@@ -302,7 +289,6 @@ aside {
   }
 }
 
-/* Grid proyek responsif */
 #projects .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -314,7 +300,6 @@ aside {
   height: auto;
 }
 
-/* Footer responsif */
 footer {
   padding: 1.5rem;
 }
@@ -323,7 +308,6 @@ footer span {
   font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
-/* Flip card responsif */
 .flip-card {
   width: clamp(100px, 20vw, 128px);
   height: clamp(100px, 20vw, 128px);
@@ -334,14 +318,12 @@ footer span {
   height: auto;
 }
 
-/* Animasi fade-in untuk mobile */
 @media (max-width: 640px) {
   .fade-in {
     transform: translateY(10px);
   }
 }
 
-/* Media query untuk tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   aside {
     width: 12rem;

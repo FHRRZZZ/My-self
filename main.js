@@ -1,16 +1,12 @@
-// Inisialisasi ikon Lucide
 lucide.createIcons();
 
-// Toggle sidebar untuk mobile
 function toggleSidebar() {
   const sidebar = document.querySelector('aside');
   sidebar.classList.toggle('active');
-  // Sesuaikan canvas saat sidebar berubah
   resizeCanvas();
   console.log("Sidebar toggled, resizing canvas");
 }
 
-// Fade-in animation on scroll menggunakan Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
   const fadeEls = document.querySelectorAll('.fade-in');
   const observer = new IntersectionObserver(
@@ -30,19 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Efek komet jatuh
 const canvas = document.getElementById('comet-bg');
-const comets = []; // Deklarasi comets di luar fungsi agar global
+const comets = [];
 if (canvas) {
   function resizeCanvas() {
     const sidebar = document.querySelector('aside');
     const isSidebarActive = sidebar.classList.contains('active');
-    const sidebarWidth = window.innerWidth <= 768 && !isSidebarActive ? 0 : 256; // 256px = 16rem
+    const sidebarWidth = window.innerWidth <= 768 && !isSidebarActive ? 0 : 256;
     canvas.width = window.innerWidth - sidebarWidth;
     canvas.height = window.innerHeight;
     canvas.style.left = `${sidebarWidth}px`;
     canvas.style.width = `calc(100vw - ${sidebarWidth}px)`;
-    console.log("Canvas resized:", canvas.width, canvas.height); // Debug ukuran
-    // Reset posisi komet saat canvas diubah ukurannya
-    comets.length = 0; // Sekarang comets terdefinisi
+    console.log("Canvas resized:", canvas.width, canvas.height); 
+    comets.length = 0; 
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -50,7 +45,6 @@ if (canvas) {
   const ctx = canvas.getContext('2d');
   if (ctx) {
     function spawnComet() {
-      // Tambahkan hingga 3 komet sekaligus
       for (let i = 0; i < 2; i++) {
         comets.push({
           x: Math.random() * canvas.width,
@@ -62,7 +56,7 @@ if (canvas) {
         });
       }
     }
-    setInterval(spawnComet, 500); // Interval lebih pendek untuk komet lebih sering
+    setInterval(spawnComet, 500); 
 
     function drawComets() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -88,7 +82,7 @@ if (canvas) {
       requestAnimationFrame(drawComets);
     }
     drawComets();
-    console.log("Comet animation started"); // Debug apakah animasi berjalan
+    console.log("Comet animation started");
   } else {
     console.error("Canvas context not available");
   }
